@@ -1,4 +1,4 @@
-mport React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 
 const PokemonPage = () => {
@@ -15,11 +15,11 @@ const PokemonPage = () => {
             const data = await response.json();
             setPokemons(data);
             setLoading(false);
-        };
+        }
 
         loadPokemons();
 
-    }, [pokemons])
+    }, [])
 
     function displayPokemons(){
         return pokemons.filter(p => p.json("results"))

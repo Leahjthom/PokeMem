@@ -12,13 +12,10 @@ const PageWrapper = () => {
             Home
           </NavLink>
           <NavLink to="/pokemon" style={styles}>
-            All snacks
+            All Pokemons
           </NavLink>
-          <NavLink to="/best" style={styles}>
-            Best snack ever
-          </NavLink>
-          <NavLink to="/add" style={styles}>
-            Add your favorite snack
+          <NavLink to="/game" style={styles}>
+            Game
           </NavLink>
         </nav>
       </header>
