@@ -7,8 +7,8 @@ const PageWrapper = () => {
   return (
     <main>
       <header>
-        <nav class="Nav">
-          <NavLink to="/" style={styles} exact>Home</NavLink>
+        <nav>
+          <NavLink to="/" style={styles}>Home</NavLink>
           <NavLink to="/pokemon" style={styles}>All Pokemons</NavLink>
           <NavLink to="/game" style={styles}>Game</NavLink>
         </nav>
@@ -17,7 +17,7 @@ const PageWrapper = () => {
       <footer>POKEMON</footer>
     </main>
     
-  );
-};
+  )
+}
 
 export default PageWrapper;
