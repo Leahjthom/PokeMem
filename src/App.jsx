@@ -1,24 +1,24 @@
-import Nav from './Nav';
-// import {Home, About, Shop, ShopItem} from './pages';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+import { HomePage, GamePage, PokemonPage, SearchPage, NotFoundPage } from './pages';
+import { PageWrapper } from './components';
+
 import './App.css';
-import {Routes, Route} from 'react-router-dom';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-        <Routes>
-          <Route path="/" element={<Nav />}>
-            {/* <Route index element={<Home />}/>
-            <Route path="/about" element={<About />}/>
-            <Route path="/shop">
-              <Route index element={<Shop />}/>
-              <Route path=":id" element={<ShopItem />}/>
-            </Route>
-            <Route path="*" element={<h1>Not found</h1>}></Route> */}
-          </Route>
-        </Routes>
-    </div>
-  )
-}
+    <Router>
+      <PageWrapper />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/" element={<PokemonPage />} />
+        <Route path="/pokemon/:id" element={<SearchPage />} />
+        <Route path="*" element={<NotFoundPage />} />
+      </Routes>
+    </Router>
+  );
+};
 
-export default App
+export default App;
+
