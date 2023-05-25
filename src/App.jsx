@@ -6,16 +6,16 @@ import { PageWrapper } from './components';
 
 const App = () => {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<PageWrapper />} />
-        <Route index element={<HomePage />} />
-        <Route path="/pokemon" element={<PokemonPage />} />
-        <Route path="/pokemon/id" element={<SearchPage />} />
-        <Route path="/game" element={<GamePage />} />
-        <Route path="*" element={<NotFoundPage />} />
-      </Routes>
-    </Router>
+    <>
+        <Routes>
+          <Route path="/" element={<PageWrapper />} />
+          <Route index element={<HomePage />} />
+          <Route path="/pokemon" element={<PokemonPage />} />
+          <Route path="/pokemon/id" element={<SearchPage />} />
+          <Route path="/game" element={<GamePage />} />
+          <Route path="*" element={<NotFoundPage />} />
+        </Routes>
+    </>
   );
 };
 

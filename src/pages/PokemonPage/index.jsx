@@ -4,7 +4,7 @@ import { Link, useParams } from 'react-router-dom';
 const PokemonPage = () => {
 
     const [loading, setLoading] = useState(false);
-    const [pokemons, setPokemons] = useState({});
+    const [pokemons, setPokemons] = useState([]);
 
     useEffect(() => {
 
@@ -19,10 +19,15 @@ const PokemonPage = () => {
 
         loadPokemons();
 
-    }, [])
+    }, [pokemons])
 
-    function displayPokemons(){
-        return pokemons.filter(p => p.json("results"))
+    async function displayPokemons(){
+        const options = {
+            method: "GET",
+            headers: { 'Content-Type': 'application/json' }
+        }
+        const response = await fetch(`https://pokeapi.co/api/v2/pokemon`, options);
+        await response.json();
     }
 
     return <main className="pokemon-main">
