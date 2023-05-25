@@ -11,7 +11,7 @@ const PageWrapper = () => {
           <NavLink to="/" style={styles} exact>
             Home
           </NavLink>
-          <NavLink to="/snacks" style={styles}>
+          <NavLink to="/pokemon" style={styles}>
             All snacks
           </NavLink>
           <NavLink to="/best" style={styles}>

@@ -12,8 +12,10 @@ const App = () => {
       <PageWrapper />
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/" element={<PokemonPage />} />
+        <Route path="/pokemon" element={<PokemonPage />} />
         <Route path="/pokemon/:id" element={<SearchPage />} />
+        <Route path="/info" element={<BestSnackPage />} />
+        <Route path="/game" element={<AddSnackPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </Router>

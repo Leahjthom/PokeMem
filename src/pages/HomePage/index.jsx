@@ -2,7 +2,7 @@ function Home() {
     return (
         <div>
             <h1>Home</h1>
-            <p>I am a homepage!</p>
+            <p>Welcome to our Pokemon Game!</p>
         </div>
     )
 }
